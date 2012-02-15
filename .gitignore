@@ -1,0 +1,17 @@
+~lock.*
+.noseids
+*.egg-info/
+build/
+dist/
+*.log
+*.log.*
+.dir-locals.el
+.idea/
+*.pyc
+*.pyo
+.ropeproject
+/tmp
+*~
+.settings
+.project
+.pydevproject

@@ -1,4 +1,3 @@
-from __future__ import unicode_literals
 import os
 
 try:
@@ -14,7 +13,7 @@ with open(os.path.join(PATH_TO_FILE, 'README.rst')) as f:
     long_description = f.read()
 
 
-VERSION = (0, 1, 'pre')
+VERSION = (0, 1)
 
 
 # Dynamically calculate the version based on VERSION tuple
@@ -33,7 +32,7 @@ setup(
     description="A python nose plugin to override environment variables.",
     long_description=long_description,
     author='Mahmoud Abdelkader',
-    author_email='',
+    author_email='mabdelkader@gmail.com',
     url='https://github.com/mahmoudimus/nose-setenv',
     install_requires=[
         'nose >=1.0.0',
@@ -41,10 +40,11 @@ setup(
     setup_requires=[],
     test_suite='nose.collector',
     zip_safe=False,
-    py_modules=['nose_setenv'],
-    entry_points={
-        'nose.plugins.0.10': [
-            'nose_setenv = nose_setenv:SetEnvironmentVariables',
-        ]
-    },
+    packages=['nose_setenv'],
+    classifiers=[
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Programming Language :: Python',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
 )

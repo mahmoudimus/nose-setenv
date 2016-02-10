@@ -34,6 +34,7 @@ setup(
     author='Mahmoud Abdelkader',
     author_email='mabdelkader@gmail.com',
     url='https://github.com/mahmoudimus/nose-setenv',
+    license='Apache Software License (v2)',
     install_requires=[
         'nose >=1.0.0',
     ],
@@ -43,7 +44,7 @@ setup(
     packages=find_packages(),
     classifiers=[
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        "License :: OSI Approved :: Apache Software License",
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],

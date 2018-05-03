@@ -7,6 +7,13 @@ import nose
 from nose.plugins import Plugin
 
 
+def _iteritems(env_variables_to_override):
+    try:
+        return env_variables_to_override.iteritems()
+    except AttributeError:
+        return env_variables_to_override.items()
+
+
 class SetEnvironmentVariables(Plugin):
     """
     This plugin is used to set environment variables to seamlessly integrate
@@ -34,7 +41,7 @@ class SetEnvironmentVariables(Plugin):
             return
 
         env_variables_to_override = ast.literal_eval(options.set_env_variables)
-        for env_key, env_val in env_variables_to_override.iteritems():
+        for env_key, env_val in _iteritems(env_variables_to_override):
             os.environ[env_key] = env_val
 
 

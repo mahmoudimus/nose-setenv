@@ -1,0 +1,8 @@
+dependencies:
+  post:
+    - pip install --upgrade pip
+    - pip install -e .
+    - pip install rednose
+test:
+  override:
+    - nosetests

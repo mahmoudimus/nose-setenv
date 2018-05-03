@@ -1,3 +1,6 @@
 from __future__ import unicode_literals
 
-from nose_setenv import SetEnvironmentVariables
+try:
+    from nose_setenv import SetEnvironmentVariables
+except ImportError:
+    from nose_setenv.nose_setenv import SetEnvironmentVariables

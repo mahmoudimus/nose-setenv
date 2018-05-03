@@ -9,9 +9,15 @@ dist/
 .idea/
 *.pyc
 *.pyo
+__py_cache__
 .ropeproject
 /tmp
 *~
+.DS_Store
+
 .settings
 .project
 .pydevproject
+.python
+
+.idea
